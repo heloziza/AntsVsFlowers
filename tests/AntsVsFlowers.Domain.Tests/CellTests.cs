@@ -36,4 +36,17 @@ public class CellTests
         // Assert
         Assert.True(cell.HasAnthill);
     }
+
+    [Fact]
+    public void ToggleFlag_OnHiddenCell_FlagsCell()
+    {
+        // Arrange
+        Cell cell = new Cell(hasAnthill: false);
+
+        // Act
+        cell.ToggleFlag();
+
+        // Assert
+        Assert.True(cell.IsFlagged);
+    }
 }
