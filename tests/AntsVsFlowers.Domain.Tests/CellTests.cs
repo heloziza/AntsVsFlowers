@@ -63,4 +63,18 @@ public class CellTests
         // Assert
         Assert.False(cell.IsFlagged);
     }
+
+    [Fact]
+    public void Reveal_OnFlaggedCell_DoesNotReveal()
+    {
+        // Arrange
+        Cell cell = new Cell(hasAnthill: false);
+        cell.ToggleFlag();
+
+        // Act
+        cell.Reveal();
+
+        // Assert
+        Assert.False(cell.IsRevealed);
+    }
 }

@@ -13,6 +13,10 @@ public class Cell
 
     public void Reveal()
     {
+        if (IsFlagged)
+        {
+            return;
+        }
         IsRevealed = true;
     }
 
