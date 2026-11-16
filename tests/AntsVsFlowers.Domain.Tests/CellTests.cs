@@ -1,4 +1,5 @@
 ﻿namespace AntsVsFlowers.Domain.Tests;
+
 using AntsVsFlowers.Domain;
 
 public class CellTests
@@ -11,5 +12,18 @@ public class CellTests
 
         // Assert
         Assert.False(cell.IsRevealed);
+    }
+
+    [Fact]
+    public void Reveal_MakesCellRevealed()
+    {
+        // Arrange
+        Cell cell = new Cell();
+
+        // Act
+        cell.Reveal();
+
+        // Assert
+        Assert.True(cell.IsRevealed);
     }
 }
