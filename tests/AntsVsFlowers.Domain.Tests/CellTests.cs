@@ -49,4 +49,18 @@ public class CellTests
         // Assert
         Assert.True(cell.IsFlagged);
     }
+
+    [Fact]
+    public void ToggleFlag_OnFlaggedCell_RemovesFlag()
+    {
+        // Arrange
+        Cell cell = new Cell(hasAnthill: false);
+        cell.ToggleFlag();
+
+        // Act
+        cell.ToggleFlag();
+
+        // Assert
+        Assert.False(cell.IsFlagged);
+    }
 }

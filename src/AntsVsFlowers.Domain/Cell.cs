@@ -6,7 +6,6 @@ public class Cell
     public bool HasAnthill { get; }
     public bool IsFlagged { get; private set; }
 
-
     public Cell(bool hasAnthill)
     {
         HasAnthill = hasAnthill;
